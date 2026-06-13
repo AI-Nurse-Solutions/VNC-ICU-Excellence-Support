@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excellence Support Committee · One-Pager</title>
+  <meta name="description" content="A printable one-page introduction to the Excellence Support Committee of the VNC ICU." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --teal-900:#0c3f4c; --teal-700:#115a6c; --teal-500:#1a8298; --teal-100:#d6edf2;
+      --slate-700:#2f4148; --slate-500:#5b6b72; --line:#e3edef;
+      --green:#2e9e6b; --amber:#d99320; --red:#cf5145;
+      --font:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:var(--font);color:var(--slate-700);background:#eef4f5;line-height:1.5;-webkit-font-smoothing:antialiased;}
+
+    /* Toolbar (screen only) */
+    .toolbar{position:sticky;top:0;background:#fff;border-bottom:1px solid var(--line);padding:12px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+    .toolbar span{color:var(--slate-500);font-size:.9rem;}
+    .toolbar a, .btn-print{font-family:var(--font);cursor:pointer;border:none;border-radius:999px;padding:10px 20px;font-weight:600;font-size:.92rem;text-decoration:none;}
+    .btn-print{background:var(--teal-700);color:#fff;}
+    .btn-print:hover{background:var(--teal-900);}
+    .toolbar a.back{background:#eef4f5;color:var(--teal-700);}
+
+    /* Sheet */
+    .sheet{width:8.5in;min-height:11in;margin:24px auto;background:#fff;padding:0.55in 0.6in;box-shadow:0 10px 40px rgba(12,63,76,.12);}
+    .head{display:flex;align-items:center;gap:14px;border-bottom:3px solid var(--teal-700);padding-bottom:14px;}
+    .head .mark{width:46px;height:46px;flex:none;}
+    .head h1{margin:0;font-size:1.5rem;color:var(--teal-900);letter-spacing:-.01em;}
+    .head .sub{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-500);font-weight:600;margin-top:3px;}
+    .tagline{text-align:right;margin-left:auto;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--slate-500);font-weight:600;line-height:1.7;}
+
+    h2.lead{color:var(--teal-900);font-size:1.18rem;margin:18px 0 6px;}
+    .promise{color:var(--slate-700);font-size:.95rem;margin:0 0 4px;}
+
+    .sec-tag{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-500);font-weight:700;margin:18px 0 8px;}
+
+    .steps{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
+    .step{border:1px solid var(--line);border-radius:10px;padding:13px 14px;background:#fbfdfd;}
+    .step .n{display:inline-block;background:var(--teal-100);color:var(--teal-700);font-weight:700;font-size:.7rem;border-radius:999px;padding:3px 10px;letter-spacing:.06em;}
+    .step h3{margin:8px 0 4px;font-size:.92rem;color:var(--teal-900);}
+    .step p{margin:0;font-size:.78rem;color:var(--slate-500);}
+
+    .twocol{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;margin-top:4px;}
+    ul.help{list-style:none;padding:0;margin:6px 0 0;}
+    ul.help li{position:relative;padding:5px 0 5px 22px;font-size:.84rem;color:var(--slate-700);}
+    ul.help li::before{content:"";position:absolute;left:0;top:11px;width:9px;height:9px;border-radius:3px;background:var(--teal-100);border:2px solid var(--teal-500);}
+
+    .guardrails{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:6px;}
+    .gr{display:flex;align-items:center;gap:9px;font-size:.82rem;color:var(--slate-700);background:#fbfdfd;border:1px solid var(--line);border-radius:8px;padding:8px 10px;}
+    .dot{width:11px;height:11px;border-radius:50%;flex:none;}
+    .tiers{display:flex;gap:7px;align-items:center;margin-top:9px;font-size:.78rem;color:var(--slate-500);}
+    .pill{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 11px;font-weight:600;font-size:.74rem;}
+
+    .closing{margin-top:18px;background:var(--teal-100);border-left:4px solid var(--teal-500);border-radius:8px;padding:13px 16px;}
+    .closing p{margin:0;color:var(--teal-900);font-size:.88rem;}
+    .foot{margin-top:16px;border-top:1px solid var(--line);padding-top:10px;display:flex;justify-content:space-between;font-size:.74rem;color:var(--slate-500);flex-wrap:wrap;gap:6px;}
+
+    @media print{
+      @page{size:Letter;margin:0;}
+      body{background:#fff;}
+      .toolbar{display:none;}
+      .sheet{box-shadow:none;margin:0;width:auto;min-height:auto;padding:0.5in 0.55in;}
+    }
+    @media(max-width:700px){
+      .sheet{width:auto;padding:24px 18px;}
+      .steps,.guardrails{grid-template-columns:1fr;}
+      .twocol{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <span>Tip: choose “Save as PDF” or print on Letter paper. Backgrounds print best with “Background graphics” turned on.</span>
+    <div>
+      <a class="back" href="index.html">← Back to site</a>
+      <button class="btn-print" onclick="window.print()">🖨 Print / Save as PDF</button>
+    </div>
+  </div>
+
+  <div class="sheet">
+    <div class="head">
+      <svg class="mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="64" height="64" rx="15" fill="#115a6c"/>
+        <path d="M32 11l17 8v12c0 10.6-7.2 18.2-17 20.6C22.2 49.2 15 41.6 15 31V19l17-8z" fill="#6fc0cf" opacity=".35"/>
+        <path d="M22 33l7 7 14-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div>
+        <div class="sub">VNC ICU · Shared Governance</div>
+        <h1>Excellence Support Committee</h1>
+      </div>
+      <div class="tagline">Support<br/>Encourage<br/>Elevate</div>
+    </div>
+
+    <h2 class="lead">You hold the unit together. We're here to hold you up.</h2>
+    <p class="promise">Nurses pour themselves into their patients. Our committees pour themselves into this unit. No team should have to carry that alone — so we walk alongside each one with the tools, encouragement, and partnership to help your work, and your people, flourish. When you feel cared for, your patients feel it too.</p>
+
+    <div class="sec-tag">Your welcome — three gentle steps</div>
+    <div class="steps">
+      <div class="step">
+        <span class="n">Step 1</span>
+        <h3>Finding Our Footing Together</h3>
+        <p>Make your purpose real, picture success, and settle into gentle guardrails that keep everyone safe and free to lead.</p>
+      </div>
+      <div class="step">
+        <span class="n">Step 2</span>
+        <h3>Growing Stronger, Together</h3>
+        <p>Lean on each other's strengths, solve problems side by side, and grow through kind, steady feedback.</p>
+      </div>
+      <div class="step">
+        <span class="n">Step 3</span>
+        <h3>Standing on Your Own</h3>
+        <p>Use friendly templates, plan side by side, and know a steady hand is always within reach.</p>
+      </div>
+    </div>
+
+    <div class="twocol">
+      <div>
+        <div class="sec-tag">How we lighten the load</div>
+        <ul class="help">
+          <li>We listen first, then shape goals together.</li>
+          <li>We make tough calls feel safe with simple risk tiers.</li>
+          <li>We connect you to the right people at the right time.</li>
+          <li>We celebrate progress with warm, regular check-ins.</li>
+          <li>We hand you templates and playbooks that just work.</li>
+        </ul>
+        <div class="tiers">
+          <span class="pill" style="background:#e4f4ec;color:#2e9e6b;"><span class="dot" style="background:#2e9e6b;"></span>Green</span>
+          <span class="pill" style="background:#fbf2dd;color:#d99320;"><span class="dot" style="background:#d99320;"></span>Yellow</span>
+          <span class="pill" style="background:#fae6e3;color:#cf5145;"><span class="dot" style="background:#cf5145;"></span>Red</span>
+          <span>simple tiers for confident decisions</span>
+        </div>
+      </div>
+      <div>
+        <div class="sec-tag">Gentle guardrails</div>
+        <div class="guardrails">
+          <div class="gr"><span class="dot" style="background:#1a8298;"></span>Risk — pause &amp; weigh together</div>
+          <div class="gr"><span class="dot" style="background:#2e9e6b;"></span>Autonomy — the call stays yours</div>
+          <div class="gr"><span class="dot" style="background:#d99320;"></span>Outcomes — measure what matters</div>
+          <div class="gr"><span class="dot" style="background:#115a6c;"></span>Transparency — decisions stay visible</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="closing">
+      <p><strong>You're never leading alone.</strong> Whether you're just starting out or finding your stride, reach out any time — there's no such thing as a small question. We're proud to be in your corner.</p>
+    </div>
+
+    <div class="foot">
+      <span>Excellence Support Committee · VNC ICU Shared Governance</span>
+      <span>ai-nurse-solutions.github.io/VNC-ICU-Excellence-Support</span>
+    </div>
+  </div>
+
+</body>
+</html>

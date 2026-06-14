@@ -111,6 +111,16 @@ section { padding: 72px 0; }
 .pillar h3 { color: var(--teal-700); font-size: 1.05rem; text-transform: uppercase; letter-spacing: .08em; }
 .pillar p { color: var(--slate-700); margin-bottom: 0; }
 
+
+.role-strip {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 28px;
+}
+.role-card {
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow-sm);
+}
+.role-card h3 { color: var(--teal-700); font-size: .95rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+.role-card p { color: var(--slate-700); margin: 0; font-size: .95rem; }
+
 /* ---------- Methodology grid ---------- */
 .grid-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; }
 .method {

@@ -200,6 +200,25 @@ ul.clean li::before { content: ""; position: absolute; left: 0; top: 14px; width
 .chips { display: flex; flex-wrap: wrap; gap: 12px; margin: 8px 0 0; }
 .chip { background: var(--teal-100); color: var(--teal-900); border-radius: 999px; padding: 8px 16px; font-size: .9rem; font-weight: 600; }
 
+/* ---------- Committee examples page ---------- */
+.tier-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.tier-card, .example-card, .tool-card {
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 24px; box-shadow: var(--shadow-sm);
+}
+.tier-card h3, .tool-card h3 { color: var(--teal-700); font-size: 1rem; }
+.tier-card p, .tier-card strong, .tool-card p { color: var(--slate-700); font-size: .94rem; }
+.green-tier { border-top: 5px solid var(--green); }
+.amber-tier { border-top: 5px solid var(--amber); }
+.red-tier { border-top: 5px solid var(--red); }
+.example-list { display: grid; gap: 22px; }
+.example-card h3 { color: var(--teal-900); font-size: 1.35rem; margin-bottom: 6px; }
+.example-card .note { display: inline-block; background: var(--teal-100); color: var(--teal-900); border-radius: 999px; padding: 4px 12px; font-size: .82rem; font-weight: 600; margin-bottom: 14px; }
+.example-card dl { display: grid; grid-template-columns: 180px 1fr; gap: 10px 18px; margin: 16px 0 0; }
+.example-card dt { color: var(--teal-700); font-weight: 700; }
+.example-card dd { margin: 0; color: var(--slate-700); }
+.tool-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+
 /* ---------- CTA band ---------- */
 .cta-band { background: var(--teal-900); color: #eaf6f8; text-align: center; }
 .cta-band h2 { color: #fff; }
@@ -220,5 +239,7 @@ ul.clean li::before { content: ""; position: absolute; left: 0; top: 14px; width
   .section-block.rev .text { order: 0; }
   .nav-links { display: none; }
   .hero-art { display: none; }
+  .example-card dl { grid-template-columns: 1fr; gap: 4px; }
+  .example-card dd { margin-bottom: 12px; }
   section { padding: 52px 0; }
 }
